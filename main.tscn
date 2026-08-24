@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://c1m7spsprnp72"]
 
 [ext_resource type="Script" uid="uid://b7r06eqyphaqr" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://c2jpj2v03dt7v" path="res://dialogue_manager.gd" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://bpm8mrrug15gl" path="res://dialogue_pane.gd" id="2_h2yge"]
+[ext_resource type="FontFile" uid="uid://cxgl8wub4vfgb" path="res://Collection.ttf" id="3_h2yge"]
 
 [sub_resource type="Gradient" id="Gradient_ig7tw"]
 colors = PackedColorArray(0.5154629, 0.3575466, 0.23736697, 1, 0.8196129, 0.6189747, 0.471861, 1)
@@ -23,3 +26,43 @@ offset_bottom = 705.5
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_v3prh")
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=1281498468 node_paths=PackedStringArray("dialogue_pane")]
+script = ExtResource("2_1bvp3")
+dialogue_pane = NodePath("DialoguePane")
+
+[node name="DialoguePane" type="Panel" parent="UILayer" unique_id=2021066872 node_paths=PackedStringArray("dialogue_label")]
+custom_minimum_size = Vector2(400, 300)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("2_h2yge")
+dialogue_label = NodePath("MarginContainer/Label")
+
+[node name="MarginContainer" type="MarginContainer" parent="UILayer/DialoguePane" unique_id=459715509]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="Label" type="Label" parent="UILayer/DialoguePane/MarginContainer" unique_id=2028982831]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("3_h2yge")
+text = "Test words from a very wise prophet!"
