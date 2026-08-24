@@ -10,3 +10,8 @@ func _enter_tree() -> void:
 func show_dialogue(text: String) -> void:
 	dialogue_pane.show()
 	dialogue_pane.set_text(text)
+	Globals.dialogue_is_in_progress = true
+
+func end_dialogue() -> void:
+	dialogue_pane.hide()
+	Globals.dialogue_is_in_progress = false
