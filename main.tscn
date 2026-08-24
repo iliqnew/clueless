@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c2jpj2v03dt7v" path="res://dialogue_manager.gd" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://bpm8mrrug15gl" path="res://dialogue_pane.gd" id="2_h2yge"]
 [ext_resource type="FontFile" uid="uid://cxgl8wub4vfgb" path="res://Collection.ttf" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cqy42et3mtxtw" path="res://player.tscn" id="5_lquwl"]
 
 [sub_resource type="Gradient" id="Gradient_ig7tw"]
 colors = PackedColorArray(0.5154629, 0.3575466, 0.23736697, 1, 0.8196129, 0.6189747, 0.471861, 1)
@@ -66,3 +67,6 @@ layout_mode = 2
 size_flags_vertical = 1
 theme_override_fonts/font = ExtResource("3_h2yge")
 text = "Test words from a very wise prophet!"
+
+[node name="Player" parent="." unique_id=521609202 instance=ExtResource("5_lquwl")]
+position = Vector2(71, 76)

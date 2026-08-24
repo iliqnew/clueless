@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://vc1ls5jeehot"]
+
+[ext_resource type="Texture2D" uid="uid://pmdjujm12bip" path="res://npc.png" id="1_ideak"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_caca7"]
+size = Vector2(100, 100)
+
+[node name="NPC" type="Node2D" unique_id=1634797251]
+
+[node name="TalkTrigger" type="Area2D" parent="." unique_id=1264624414]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TalkTrigger" unique_id=686156946]
+shape = SubResource("RectangleShape2D_caca7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=21530301]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_ideak")
