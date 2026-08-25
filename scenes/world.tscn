@@ -1,10 +1,11 @@
-[gd_scene format=4 uid="uid://civacg2x8ikrd"]
+[gd_scene format=4 uid="uid://do2vws1ugi1pu"]
 
 [ext_resource type="Texture2D" uid="uid://v25qfvf75mp5" path="res://assets/tilesets/ground.png" id="1_036b0"]
 [ext_resource type="Texture2D" uid="uid://dxcedb6iq2lvv" path="res://assets/tilesets/walls.png" id="2_dwbse"]
 [ext_resource type="Texture2D" uid="uid://c2htdaqou8vnc" path="res://assets/tilesets/doors.png" id="3_pkg7o"]
-[ext_resource type="PackedScene" uid="uid://cqy42et3mtxtw" path="res://player.tscn" id="4_gbfbk"]
-[ext_resource type="PackedScene" uid="uid://vc1ls5jeehot" path="res://npc.tscn" id="5_ioo17"]
+[ext_resource type="PackedScene" uid="uid://cqy42et3mtxtw" path="res://scenes/player.tscn" id="4_gbfbk"]
+[ext_resource type="PackedScene" uid="uid://vc1ls5jeehot" path="res://scenes/npc.tscn" id="5_ioo17"]
+[ext_resource type="PackedScene" uid="uid://byfil7o0b8xnt" path="res://scenes/scene_entry.tscn" id="7_gbfbk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ir8iy"]
 texture = ExtResource("1_036b0")
@@ -6938,7 +6939,8 @@ texture = ExtResource("3_pkg7o")
 [sub_resource type="TileSet" id="TileSet_d2bti"]
 sources/0 = SubResource("TileSetAtlasSource_nr8wp")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ta5nu"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fm5fd"]
+size = Vector2(20, 96)
 
 [node name="World" type="Node2D" unique_id=1901877510]
 
@@ -6956,18 +6958,16 @@ tile_set = SubResource("TileSet_0h7mo")
 tile_map_data = PackedByteArray("AAAUAAQAAAAAAAAAAAAVAAQAAAAAAAAAAAAWAAQAAAAAAAAAAAAXAAQAAAAAAAAAAAAYAAQAAAAAAAAAAAAZAAQAAAAAAAAAAAAaAAQAAAAAAAAAAAAbAAQAAAAAAAAAAAAbAAMAAAAAAAAAAAAbAAIAAAAAAAAAAAAbAAEAAAAAAAAAAAAaAAAAAAAAAAAAAAAZAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAXAAAAAAAAAAAAAAAWAAAAAAAAAAAAAAAVAAAAAAAAAAAAAAAUAAEAAAAAAAAAAAAUAAIAAAAAAAAAAAAUAAMAAAAAAAAAAAAVAAEAAAAAAAAAAAAWAAEAAAAAAAAAAAAXAAEAAAAAAAAAAAAYAAEAAAAAAAAAAAAZAAEAAAAAAAAAAAAaAAEAAAAAAAAAAAAVAAIAAAAAAAAAAAAWAAIAAAAAAAAAAAAXAAIAAAAAAAAAAAAYAAIAAAAAAAAAAAAZAAIAAAAAAAAAAAAaAAIAAAAAAAAAAAAVAAMAAAAAAAAAAAAWAAMAAAAAAAAAAAAXAAMAAAAAAAAAAAAYAAMAAAAAAAAAAAAZAAMAAAAAAAAAAAAaAAMAAAAAAAAAAAAtABUAAAAAAAAAAAAuABUAAAAAAAAAAAAvABYAAAAAAAAAAAAvABcAAAAAAAAAAAAvABgAAAAAAAAAAAAvABkAAAAAAAAAAAAvABoAAAAAAAAAAAAvABsAAAAAAAAAAAAuABwAAAAAAAAAAAAtABwAAAAAAAAAAAAtABYAAAAAAAAAAAAtABcAAAAAAAAAAAAtABoAAAAAAAAAAAAtABsAAAAAAAAAAAAtABgAAAAAAAAAAAAtABkAAAAAAAAAAAAuABYAAAAAAAAAAAAuABcAAAAAAAAAAAAuABgAAAAAAAAAAAAuABkAAAAAAAAAAAAuABoAAAAAAAAAAAAuABsAAAAAAAAAAAAUAC8AAAAAAAAAAAAbAC8AAAAAAAAAAAAVAC8AAAAAAAAAAAAWAC8AAAAAAAAAAAAXAC8AAAAAAAAAAAAYAC8AAAAAAAAAAAAZAC8AAAAAAAAAAAAaAC8AAAAAAAAAAAAUAC4AAAAAAAAAAAAVAC4AAAAAAAAAAAAWAC4AAAAAAAAAAAAXAC4AAAAAAAAAAAAYAC4AAAAAAAAAAAAZAC4AAAAAAAAAAAAaAC4AAAAAAAAAAAAbAC4AAAAAAAAAAAAUAC0AAAAAAAAAAAAVAC0AAAAAAAAAAAAWAC0AAAAAAAAAAAAXAC0AAAAAAAAAAAAYAC0AAAAAAAAAAAAZAC0AAAAAAAAAAAAaAC0AAAAAAAAAAAAbAC0AAAAAAAAAAAAUACwAAAAAAAAAAAAVACwAAAAAAAAAAAAWACwAAAAAAAAAAAAXACwAAAAAAAAAAAAYACwAAAAAAAAAAAAZACwAAAAAAAAAAAAaACwAAAAAAAAAAAAbACwAAAAAAAAAAAAVACsAAAAAAAAAAAAWACsAAAAAAAAAAAAXACsAAAAAAAAAAAAYACsAAAAAAAAAAAAZACsAAAAAAAAAAAAaACsAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_d2bti")
 
-[node name="NPCs" type="Node" parent="Environment" unique_id=1144913763]
+[node name="SceneEntry" parent="Environment" unique_id=78729976 instance=ExtResource("7_gbfbk")]
+position = Vector2(761, 400)
+connected_scene = "main"
 
-[node name="Harry" type="Node" parent="Environment/NPCs" unique_id=222242008]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/SceneEntry" unique_id=360228222]
+shape = SubResource("RectangleShape2D_fm5fd")
 
-[node name="NPC" parent="Environment/NPCs/Harry" unique_id=1634797251 instance=ExtResource("5_ioo17")]
-position = Vector2(608, 188)
+[node name="NPC" parent="Environment" unique_id=1634797251 instance=ExtResource("5_ioo17")]
+position = Vector2(609, 201)
 
 [node name="Player" parent="." unique_id=521609202 instance=ExtResource("4_gbfbk")]
 z_index = 1
-position = Vector2(130, 156)
-safe_margin = 0.001
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player" unique_id=712152633]
-position = Vector2(0, 24)
-shape = SubResource("CircleShape2D_ta5nu")
+position = Vector2(160, 208)
