@@ -18,6 +18,7 @@ config/icon="res://assets/sprites/icon.svg"
 [autoload]
 
 Globals="*uid://d3tonkn0vwh8w"
+Enums="*uid://yv5a6q1aj8pk"
 
 [display]
 
