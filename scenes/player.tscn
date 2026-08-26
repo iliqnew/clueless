@@ -6,29 +6,28 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_caca7"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
-size = Vector2(40, 68)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_td4se"]
+size = Vector2(40, 66)
 
 [node name="Player" type="CharacterBody2D" unique_id=521609202 node_paths=PackedStringArray("interact_key_sprite", "interact_area")]
 script = ExtResource("1_onrkg")
 interact_key_sprite = NodePath("InteractKeySprite")
-interact_area = NodePath("InteractArea2D")
+interact_area = NodePath("InteractionArea2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1522362181]
+position = Vector2(0, 23)
+shape = SubResource("RectangleShape2D_caca7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1729613953]
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_4flbx")
 
 [node name="InteractKeySprite" type="Sprite2D" parent="." unique_id=1074902464]
-position = Vector2(1.9073486e-06, -44.500004)
-scale = Vector2(0.46875, 0.45312497)
+position = Vector2(0, -63)
+scale = Vector2(0.535, 0.535)
 texture = ExtResource("3_qhqgy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1522362181]
-position = Vector2(0, 23)
-shape = SubResource("RectangleShape2D_caca7")
+[node name="InteractionArea2D" type="Area2D" parent="." unique_id=1959314851]
 
-[node name="InteractArea2D" type="Area2D" parent="." unique_id=1403451122]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea2D" unique_id=1749405628]
-position = Vector2(0, 2)
-shape = SubResource("RectangleShape2D_qhqgy")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea2D" unique_id=776195926]
+shape = SubResource("RectangleShape2D_td4se")
