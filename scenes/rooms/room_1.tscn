@@ -13,8 +13,8 @@ player_entrances = {
 [node name="EastSceneEntry" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="4" unique_id=78729976]
 next_scene_path = "uid://dkhuj2fp22sc1"
 
-[node name="NPC" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="5" unique_id=1634797251]
-dialogue_text = "Welcome to the labyrinth, traveler! To progress further you need to go through the east door."
+[node name="NPC" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="7" unique_id=1634797251]
+dialogue_text = "Welcome to the labyrinth, traveler! I bet you're here in search of the treasure chest. However it's just a legend. Me and my twin brothers have been here since we were born and haven't found it yet... Okay okay... Our grandfather said it's somewhere on the EAST of this very room."
 
 [node name="Label" parent="UILayer/DialoguePane/MarginContainer" parent_id_path=PackedInt32Array(1895365772) index="0" unique_id=1450783932]
 text = "long long long long longlong long long long longlong long long long longlong long long long longlong long long long longlong long long long longlong long long long longlong long long long longlong long long long longlong long long long longlong long long long longlong long long long longlong long long long longlong long long long longlong long long long longlong long long long longlong long long long longlong long long long longlong long long long long"

@@ -10,12 +10,13 @@ player_entrances = {
 3: NodePath("PlayerEntrances/SouthPlayerEntrance")
 }
 
-[node name="WestSceneEntry2" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="3" unique_id=1755860696]
+[node name="WestSceneEntry" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="3" unique_id=1755860696]
 next_scene_path = "uid://d0g1u3klhe4qr"
 
-[node name="EastSceneEntry" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="4" unique_id=78729976]
+[node name="SouthSceneEntry" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="5" unique_id=1423259472]
 next_scene_path = "uid://dmwlq2utslvf6"
+direction = 1
 
-[node name="NPC" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="5" unique_id=1634797251]
+[node name="NPC" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="7" unique_id=1634797251]
 position = Vector2(607, 617)
-dialogue_text = "No, you didn't get teleported to the same room. This is a different room. You seem to have met my twin brother back in the previous room."
+dialogue_text = "Oh! You've spoken to one of my brothers. Aah this is a lost cause, traveller. I think you should abandon it but if you insist... Some say all paths from here on were dead ends except for some in the SOUTH. Good luck!"

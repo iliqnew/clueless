@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://byfil7o0b8xnt" path="res://scenes/scene_entry.tscn" id="7_gbfbk"]
 [ext_resource type="Script" uid="uid://c2jpj2v03dt7v" path="res://scripts/dialogue_manager.gd" id="7_obugw"]
 [ext_resource type="Script" uid="uid://bpm8mrrug15gl" path="res://scripts/dialogue_pane.gd" id="8_2huds"]
+[ext_resource type="Script" uid="uid://dsf74njrc5fht" path="res://scripts/scene_entry.gd" id="8_mkwf2"]
 [ext_resource type="FontFile" uid="uid://cxgl8wub4vfgb" path="res://assets/fonts/Collection.ttf" id="9_mkwf2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ir8iy"]
@@ -6944,7 +6945,7 @@ texture = ExtResource("3_pkg7o")
 sources/0 = SubResource("TileSetAtlasSource_nr8wp")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fm5fd"]
-size = Vector2(20, 96)
+size = Vector2(20, 128)
 
 [sub_resource type="Gradient" id="Gradient_ig7tw"]
 colors = PackedColorArray(0.5154629, 0.3575466, 0.23736697, 1, 0.8196129, 0.6189747, 0.471861, 1)
@@ -6977,10 +6978,10 @@ tile_set = SubResource("TileSet_0h7mo")
 tile_map_data = PackedByteArray("AAAUAAQAAAAAAAAAAAAVAAQAAAAAAAAAAAAWAAQAAAAAAAAAAAAXAAQAAAAAAAAAAAAYAAQAAAAAAAAAAAAZAAQAAAAAAAAAAAAaAAQAAAAAAAAAAAAbAAQAAAAAAAAAAAAbAAMAAAAAAAAAAAAbAAIAAAAAAAAAAAAbAAEAAAAAAAAAAAAaAAAAAAAAAAAAAAAZAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAXAAAAAAAAAAAAAAAWAAAAAAAAAAAAAAAVAAAAAAAAAAAAAAAUAAEAAAAAAAAAAAAUAAIAAAAAAAAAAAAUAAMAAAAAAAAAAAAVAAEAAAAAAAAAAAAWAAEAAAAAAAAAAAAXAAEAAAAAAAAAAAAYAAEAAAAAAAAAAAAZAAEAAAAAAAAAAAAaAAEAAAAAAAAAAAAVAAIAAAAAAAAAAAAWAAIAAAAAAAAAAAAXAAIAAAAAAAAAAAAYAAIAAAAAAAAAAAAZAAIAAAAAAAAAAAAaAAIAAAAAAAAAAAAVAAMAAAAAAAAAAAAWAAMAAAAAAAAAAAAXAAMAAAAAAAAAAAAYAAMAAAAAAAAAAAAZAAMAAAAAAAAAAAAaAAMAAAAAAAAAAAAtABUAAAAAAAAAAAAuABUAAAAAAAAAAAAvABYAAAAAAAAAAAAvABcAAAAAAAAAAAAvABgAAAAAAAAAAAAvABkAAAAAAAAAAAAvABoAAAAAAAAAAAAvABsAAAAAAAAAAAAuABwAAAAAAAAAAAAtABwAAAAAAAAAAAAtABYAAAAAAAAAAAAtABcAAAAAAAAAAAAtABoAAAAAAAAAAAAtABsAAAAAAAAAAAAtABgAAAAAAAAAAAAtABkAAAAAAAAAAAAuABYAAAAAAAAAAAAuABcAAAAAAAAAAAAuABgAAAAAAAAAAAAuABkAAAAAAAAAAAAuABoAAAAAAAAAAAAuABsAAAAAAAAAAAAUAC8AAAAAAAAAAAAbAC8AAAAAAAAAAAAVAC8AAAAAAAAAAAAWAC8AAAAAAAAAAAAXAC8AAAAAAAAAAAAYAC8AAAAAAAAAAAAZAC8AAAAAAAAAAAAaAC8AAAAAAAAAAAAUAC4AAAAAAAAAAAAVAC4AAAAAAAAAAAAWAC4AAAAAAAAAAAAXAC4AAAAAAAAAAAAYAC4AAAAAAAAAAAAZAC4AAAAAAAAAAAAaAC4AAAAAAAAAAAAbAC4AAAAAAAAAAAAUAC0AAAAAAAAAAAAVAC0AAAAAAAAAAAAWAC0AAAAAAAAAAAAXAC0AAAAAAAAAAAAYAC0AAAAAAAAAAAAZAC0AAAAAAAAAAAAaAC0AAAAAAAAAAAAbAC0AAAAAAAAAAAAUACwAAAAAAAAAAAAVACwAAAAAAAAAAAAWACwAAAAAAAAAAAAXACwAAAAAAAAAAAAYACwAAAAAAAAAAAAZACwAAAAAAAAAAAAaACwAAAAAAAAAAAAbACwAAAAAAAAAAAAVACsAAAAAAAAAAAAWACsAAAAAAAAAAAAXACsAAAAAAAAAAAAYACsAAAAAAAAAAAAZACsAAAAAAAAAAAAaACsAAAAAAAAAAAAAABYAAAAAAAsAAAAAABcAAAAAAAsAAAAAABgAAAAAAAsAAAAAABkAAAAAAAsAAAAAABoAAAAAAAsAAAAAABsAAAAAAAsAAAABABsAAAAAAAsAAAABABoAAAAAAAsAAAABABkAAAAAAAsAAAABABgAAAAAAAsAAAABABcAAAAAAAsAAAABABYAAAAAAAsAAAACABYAAAAAAAsAAAACABcAAAAAAAsAAAACABgAAAAAAAsAAAACABkAAAAAAAsAAAACABoAAAAAAAsAAAACABsAAAAAAAsAAAABABUAAAAAAAsAAAACABUAAAAAAAsAAAABABwAAAAAAAsAAAACABwAAAAAAAsAAAA=")
 tile_set = SubResource("TileSet_d2bti")
 
-[node name="WestSceneEntry2" parent="Environment" unique_id=1755860696 instance=ExtResource("7_gbfbk")]
+[node name="WestSceneEntry" parent="Environment" unique_id=1755860696 instance=ExtResource("7_gbfbk")]
 position = Vector2(9, 400)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/WestSceneEntry2" unique_id=140325434]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/WestSceneEntry" unique_id=140325434]
 shape = SubResource("RectangleShape2D_fm5fd")
 
 [node name="EastSceneEntry" parent="Environment" unique_id=78729976 instance=ExtResource("7_gbfbk")]
@@ -6988,6 +6989,24 @@ position = Vector2(761, 400)
 direction = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/EastSceneEntry" unique_id=360228222]
+shape = SubResource("RectangleShape2D_fm5fd")
+
+[node name="SouthSceneEntry" type="Area2D" parent="Environment" unique_id=1423259472]
+script = ExtResource("8_mkwf2")
+metadata/_custom_type_script = "uid://dsf74njrc5fht"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/SouthSceneEntry" unique_id=1806540963]
+position = Vector2(384, 763)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_fm5fd")
+
+[node name="NorthSceneEntry" type="Area2D" parent="Environment" unique_id=501723667]
+script = ExtResource("8_mkwf2")
+metadata/_custom_type_script = "uid://dsf74njrc5fht"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/NorthSceneEntry" unique_id=1235196201]
+position = Vector2(383.99997, 6)
+rotation = 1.5707964
 shape = SubResource("RectangleShape2D_fm5fd")
 
 [node name="NPC" parent="Environment" unique_id=1634797251 instance=ExtResource("5_ioo17")]
