@@ -1,13 +1,10 @@
 class_name SceneEntry extends Area2D
 
-
-@export var connected_scene: String
-@export var scene_folder: String = "res://scenes/"
-
+@export var next_scene: PackedScene
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
-		var scene = str(scene_folder, connected_scene, ".tscn")
-		var scene_tree = get_tree()
-		print(scene)
-		scene_tree.change_scene_to_file(scene)
+		if next_scene == null:
+			print_debug("Next scene is null, make sure there isn't a circular dependancy that is preventing the attached packed scene from being loaded and remaining null")
+
+		get_tree().change_scene_to_packed.call_deferred(next_scene)

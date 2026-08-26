@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dkhuj2fp22sc1"]
+
+[ext_resource type="PackedScene" uid="uid://cbo04cf0k8x18" path="res://scenes/rooms/base_room.tscn" id="1_6a8el"]
+
+[node name="Room 2" unique_id=1901877510 instance=ExtResource("1_6a8el")]
+
+[node name="NPC" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="4" unique_id=1634797251]
+dialogue_text = "No, you didn't get teleported to the same room. This is a different room. You seem to have met my twin brother back in the previous room."

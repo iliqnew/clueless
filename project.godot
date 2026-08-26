@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Clueless"
-run/main_scene="uid://c1m7spsprnp72"
+run/main_scene="uid://d0g1u3klhe4qr"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://assets/sprites/icon.svg"
 

@@ -8,6 +8,7 @@ size = Vector2(100, 100)
 
 [node name="NPC" type="Node2D" unique_id=1634797251 groups=["npcs"]]
 script = ExtResource("1_abqhh")
+dialogue_text = "Test words from a very wise prophet!"
 
 [node name="TalkTrigger" type="Area2D" parent="." unique_id=1264624414]
 

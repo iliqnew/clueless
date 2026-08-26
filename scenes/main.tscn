@@ -1,16 +1,16 @@
-[gd_scene format=3 uid="uid://c1m7spsprnp72"]
+[gd_scene format=3 uid="uid://da1o3hxwq0q37"]
 
 [ext_resource type="Script" uid="uid://b7r06eqyphaqr" path="res://scripts/main.gd" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://c2jpj2v03dt7v" path="res://scripts/dialogue_manager.gd" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://bpm8mrrug15gl" path="res://scripts/dialogue_pane.gd" id="2_h2yge"]
 [ext_resource type="FontFile" uid="uid://cxgl8wub4vfgb" path="res://assets/fonts/Collection.ttf" id="3_h2yge"]
-[ext_resource type="PackedScene" uid="uid://do2vws1ugi1pu" path="res://scenes/world.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://d0g1u3klhe4qr" path="res://scenes/rooms/room_1.tscn" id="5_lquwl"]
 
-[sub_resource type="Gradient" id="Gradient_ig7tw"]
+[sub_resource type="Gradient" id="Gradient_tbgi4"]
 colors = PackedColorArray(0.5154629, 0.3575466, 0.23736697, 1, 0.8196129, 0.6189747, 0.471861, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_v3prh"]
-gradient = SubResource("Gradient_ig7tw")
+gradient = SubResource("Gradient_tbgi4")
 fill_to = Vector2(1, 1)
 
 [node name="Main" type="Node2D" unique_id=2113277918]
@@ -67,6 +67,7 @@ theme_override_constants/margin_bottom = 25
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_fonts/font = ExtResource("3_h2yge")
-text = "Test words from a very wise prophet!"
 
-[node name="World" parent="." unique_id=1901877510 instance=ExtResource("5_lquwl")]
+[node name="RoomContainer" type="Node" parent="." unique_id=358347519]
+
+[node name="Room 1" parent="RoomContainer" unique_id=1901877510 instance=ExtResource("5_lquwl")]
