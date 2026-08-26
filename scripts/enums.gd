@@ -1,13 +1,13 @@
 extends Node
 
 enum WorldDirection {
-	West,
-	North,
-	East,
-	South
+	West,  # 0
+	North, # 1
+	East,  # 2
+	South  # 3
 }
 
-const reverse_world_directions: Dictionary[Enums.WorldDirection, Enums.WorldDirection] = {
+var reverse_world_directions: Dictionary[Enums.WorldDirection, Enums.WorldDirection] = {
 	Enums.WorldDirection.West: Enums.WorldDirection.East,
 	Enums.WorldDirection.North: Enums.WorldDirection.South,
 	Enums.WorldDirection.East: Enums.WorldDirection.West,

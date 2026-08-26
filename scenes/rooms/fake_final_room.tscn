@@ -10,8 +10,9 @@ player_entrances = {
 3: NodePath("PlayerEntrances/SouthPlayerEntrance")
 }
 
-[node name="WestSceneEntry2" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="3" unique_id=1755860696]
+[node name="WestSceneEntry" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="3" unique_id=1755860696]
 next_scene_path = "uid://dmwlq2utslvf6"
 
-[node name="NPC" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="5" unique_id=1634797251]
+[node name="NPC" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="7" unique_id=1634797251]
 position = Vector2(99, 137)
+dialogue_text = "A-ha-ha-ha-ha! Sunset? Ha-ha-ha... In a dungeon. Ha-ha! Anyway... Leave me alone. I've heard it's sleeping here. I don't know what 'it' is but I could use some sleep. So I came here... Keep it quiet."

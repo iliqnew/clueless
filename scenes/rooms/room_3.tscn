@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dmwlq2utslvf6"]
 
 [ext_resource type="PackedScene" uid="uid://cbo04cf0k8x18" path="res://scenes/rooms/base_room.tscn" id="1_etvqs"]
-[ext_resource type="Script" uid="uid://dsf74njrc5fht" path="res://scripts/scene_entry.gd" id="2_josgj"]
 
 [node name="Room 3" unique_id=1901877510 node_paths=PackedStringArray("player_entrances") instance=ExtResource("1_etvqs")]
 player_entrances = {
@@ -12,11 +11,9 @@ player_entrances = {
 }
 
 [node name="WestSceneEntry" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="3" unique_id=1755860696]
-script = ExtResource("2_josgj")
-next_scene_path = "uid://dkhuj2fp22sc1"
+next_scene_path = "uid://cptmtt0ks28nw"
 
 [node name="EastSceneEntry" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="4" unique_id=78729976]
-script = ExtResource("2_josgj")
 next_scene_path = "uid://cptmtt0ks28nw"
 
 [node name="NorthSceneEntry" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="6" unique_id=501723667]
@@ -25,6 +22,4 @@ direction = 2
 
 [node name="NPC" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="7" unique_id=1634797251]
 position = Vector2(142, 609)
-
-[connection signal="body_entered" from="Environment/WestSceneEntry" to="Environment/WestSceneEntry" method="_on_body_entered"]
-[connection signal="body_entered" from="Environment/EastSceneEntry" to="Environment/EastSceneEntry" method="_on_body_entered"]
+dialogue_text = "I bet you must now travel towards the sunset... Hmm. Sunsets... Aren't they beautiful?"
