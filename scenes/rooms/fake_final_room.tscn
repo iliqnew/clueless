@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cptmtt0ks28nw"]
+
+[ext_resource type="PackedScene" uid="uid://cbo04cf0k8x18" path="res://scenes/rooms/base_room.tscn" id="1_isvyp"]
+
+[node name="Fake Final Room" unique_id=1901877510 node_paths=PackedStringArray("player_entrances") instance=ExtResource("1_isvyp")]
+player_entrances = {
+0: NodePath("PlayerEntrances/WestPlayerEntrance"),
+1: NodePath("PlayerEntrances/NorthPlayerEntrance"),
+2: NodePath("PlayerEntrances/EastPlayerEntrance"),
+3: NodePath("PlayerEntrances/SouthPlayerEntrance")
+}
