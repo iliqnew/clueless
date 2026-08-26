@@ -1,6 +1,6 @@
 class_name SceneEntry extends Area2D
 
-@export var next_scene_path: String
+@export_file var next_scene_path: String
 @export var direction: Enums.WorldDirection
 
 func _on_body_entered(body: Node2D) -> void:

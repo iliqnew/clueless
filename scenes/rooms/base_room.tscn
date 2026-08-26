@@ -7045,9 +7045,11 @@ theme_override_constants/margin_right = 25
 theme_override_constants/margin_bottom = 25
 
 [node name="Label" type="Label" parent="UILayer/DialoguePane/MarginContainer" unique_id=1450783932]
+custom_minimum_size = Vector2(250, 250)
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_fonts/font = ExtResource("9_mkwf2")
+autowrap_mode = 2
 
 [node name="PlayerEntrances" type="Node" parent="." unique_id=1364124808]
 

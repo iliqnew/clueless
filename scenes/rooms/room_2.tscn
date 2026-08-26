@@ -11,10 +11,10 @@ player_entrances = {
 }
 
 [node name="WestSceneEntry2" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="3" unique_id=1755860696]
-next_scene_path = "res://scenes/rooms/room_1.tscn"
+next_scene_path = "uid://d0g1u3klhe4qr"
 
 [node name="EastSceneEntry" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="4" unique_id=78729976]
-next_scene_path = "res://scenes/rooms/room_3.tscn"
+next_scene_path = "uid://dmwlq2utslvf6"
 
 [node name="NPC" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="5" unique_id=1634797251]
 position = Vector2(607, 617)
