@@ -7005,6 +7005,7 @@ shape = SubResource("RectangleShape2D_td4se")
 
 [node name="NorthSceneEntry" type="Area2D" parent="Environment" unique_id=501723667]
 script = ExtResource("8_mkwf2")
+direction = 1
 metadata/_custom_type_script = "uid://dsf74njrc5fht"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/NorthSceneEntry" unique_id=1235196201]
@@ -7088,3 +7089,4 @@ position = Vector2(692, 399)
 position = Vector2(384, 657)
 
 [connection signal="body_entered" from="Environment/SouthSceneEntry" to="Environment/SouthSceneEntry" method="_on_body_entered"]
+[connection signal="body_entered" from="Environment/NorthSceneEntry" to="Environment/NorthSceneEntry" method="_on_body_entered"]

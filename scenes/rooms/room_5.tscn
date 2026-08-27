@@ -1,8 +1,8 @@
-[gd_scene format=4 uid="uid://dmwlq2utslvf6"]
+[gd_scene format=4 uid="uid://b6j6jnpqo3v4v"]
 
-[ext_resource type="PackedScene" uid="uid://cbo04cf0k8x18" path="res://scenes/rooms/base_room.tscn" id="1_etvqs"]
+[ext_resource type="PackedScene" uid="uid://cbo04cf0k8x18" path="res://scenes/rooms/base_room.tscn" id="1_wq1n7"]
 
-[node name="Room 3" unique_id=1901877510 node_paths=PackedStringArray("player_entrances") instance=ExtResource("1_etvqs")]
+[node name="Room" unique_id=1901877510 node_paths=PackedStringArray("player_entrances") instance=ExtResource("1_wq1n7")]
 player_entrances = {
 0: NodePath("PlayerEntrances/WestPlayerEntrance"),
 1: NodePath("PlayerEntrances/NorthPlayerEntrance"),
@@ -17,14 +17,13 @@ tile_map_data = PackedByteArray("AAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAA
 tile_map_data = PackedByteArray("AAAUAAQAAAAAAAAAAAAVAAQAAAAAAAAAAAAWAAQAAAAAAAAAAAAXAAQAAAAAAAAAAAAYAAQAAAAAAAAAAAAZAAQAAAAAAAAAAAAaAAQAAAAAAAAAAAAbAAQAAAAAAAAAAAAbAAMAAAAAAAAAAAAbAAIAAAAAAAAAAAAbAAEAAAAAAAAAAAAaAAAAAAAAAAAAAAAZAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAXAAAAAAAAAAAAAAAWAAAAAAAAAAAAAAAVAAAAAAAAAAAAAAAUAAEAAAAAAAAAAAAUAAIAAAAAAAAAAAAUAAMAAAAAAAAAAAAVAAEAAAAAAAAAAAAWAAEAAAAAAAAAAAAXAAEAAAAAAAAAAAAYAAEAAAAAAAAAAAAZAAEAAAAAAAAAAAAaAAEAAAAAAAAAAAAVAAIAAAAAAAAAAAAWAAIAAAAAAAAAAAAXAAIAAAAAAAAAAAAYAAIAAAAAAAAAAAAZAAIAAAAAAAAAAAAaAAIAAAAAAAAAAAAVAAMAAAAAAAAAAAAWAAMAAAAAAAAAAAAXAAMAAAAAAAAAAAAYAAMAAAAAAAAAAAAZAAMAAAAAAAAAAAAaAAMAAAAAAAAAAAAtABUAAAAAAAAAAAAuABUAAAAAAAAAAAAvABYAAAAAAAAAAAAvABcAAAAAAAAAAAAvABgAAAAAAAAAAAAvABkAAAAAAAAAAAAvABoAAAAAAAAAAAAvABsAAAAAAAAAAAAuABwAAAAAAAAAAAAtABwAAAAAAAAAAAAtABYAAAAAAAAAAAAtABcAAAAAAAAAAAAtABoAAAAAAAAAAAAtABsAAAAAAAAAAAAtABgAAAAAAAAAAAAtABkAAAAAAAAAAAAuABYAAAAAAAAAAAAuABcAAAAAAAAAAAAuABgAAAAAAAAAAAAuABkAAAAAAAAAAAAuABoAAAAAAAAAAAAuABsAAAAAAAAAAAAAABYAAAAAAAsAAAAAABcAAAAAAAsAAAAAABgAAAAAAAsAAAAAABkAAAAAAAsAAAAAABoAAAAAAAsAAAAAABsAAAAAAAsAAAABABsAAAAAAAsAAAABABoAAAAAAAsAAAABABkAAAAAAAsAAAABABgAAAAAAAsAAAABABcAAAAAAAsAAAABABYAAAAAAAsAAAACABYAAAAAAAsAAAACABcAAAAAAAsAAAACABgAAAAAAAsAAAACABkAAAAAAAsAAAACABoAAAAAAAsAAAACABsAAAAAAAsAAAABABUAAAAAAAsAAAACABUAAAAAAAsAAAABABwAAAAAAAsAAAACABwAAAAAAAsAAAA=")
 
 [node name="WestSceneEntry" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="3" unique_id=1755860696]
-next_scene_path = "uid://cptmtt0ks28nw"
+next_scene_path = "uid://2n64axd10g1n"
 
 [node name="EastSceneEntry" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="4" unique_id=78729976]
-next_scene_path = "uid://beg3q802kr4kv"
+next_scene_path = "uid://b5rs02at7yli2"
 
 [node name="NorthSceneEntry" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="6" unique_id=501723667]
-next_scene_path = "uid://dkhuj2fp22sc1"
+next_scene_path = "uid://dsgl4c18d2nco"
 
 [node name="NPC" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="7" unique_id=1634797251]
-position = Vector2(142, 609)
-dialogue_text = "I bet you must now travel towards the sunset... Hmm. Sunsets... Aren't they beautiful?"
+position = Vector2(879, 104)
