@@ -27,7 +27,7 @@ position = Vector2(-336, 83)
 next_scene_path = "uid://dv517auwjneu0"
 
 [node name="NPC" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="7" unique_id=1634797251]
-visible = false
+position = Vector2(1003, 66)
 
 [node name="NorthPlayerEntrance" parent="PlayerEntrances" parent_id_path=PackedInt32Array(1364124808) index="1" unique_id=235879124]
 position = Vector2(107, 132)

@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://c2jpj2v03dt7v" path="res://scripts/dialogue_manager.gd" id="7_obugw"]
 [ext_resource type="Script" uid="uid://bpm8mrrug15gl" path="res://scripts/dialogue_pane.gd" id="8_2huds"]
 [ext_resource type="Script" uid="uid://dsf74njrc5fht" path="res://scripts/scene_entry.gd" id="8_mkwf2"]
-[ext_resource type="FontFile" uid="uid://cxgl8wub4vfgb" path="res://assets/fonts/Collection.ttf" id="9_mkwf2"]
+[ext_resource type="FontFile" uid="uid://dapoituo35bce" path="res://assets/fonts/Montserrat-Regular.ttf" id="11_mkwf2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ir8iy"]
 texture = ExtResource("1_036b0")
@@ -7071,7 +7071,7 @@ theme_override_constants/margin_bottom = 25
 custom_minimum_size = Vector2(250, 250)
 layout_mode = 2
 size_flags_vertical = 1
-theme_override_fonts/font = ExtResource("9_mkwf2")
+theme_override_fonts/font = ExtResource("11_mkwf2")
 autowrap_mode = 2
 
 [node name="PlayerEntrances" type="Node" parent="." unique_id=1364124808]

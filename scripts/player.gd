@@ -30,8 +30,10 @@ func _process(_delta: float) -> void:
 	interact_key_sprite.show()
 
 	if Input.is_action_just_pressed("interact"):
-		var interactable_npc: NPC = get_interactable_npc()
-		interactable_npc.interact()
+		var interactable_npcs: Array[NPC] = get_interactable_npcs()
+
+		for npc in interactable_npcs:
+			npc.interact()
 
 func can_interact() -> bool:
 	for area in interact_area.get_overlapping_areas():
@@ -40,9 +42,11 @@ func can_interact() -> bool:
 	
 	return false
 
-func get_interactable_npc() -> NPC:
+func get_interactable_npcs() -> Array[NPC]:
+	var result: Array[NPC] = []
+
 	for area in interact_area.get_overlapping_areas():
 		if area.owner.is_in_group("npcs"):
-			return area.owner as NPC
+			result.push_back(area.owner as NPC)
 	
-	return null
+	return result

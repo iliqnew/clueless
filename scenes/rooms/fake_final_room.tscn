@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cbo04cf0k8x18" path="res://scenes/rooms/base_room.tscn" id="1_isvyp"]
 [ext_resource type="PackedScene" uid="uid://vc1ls5jeehot" path="res://scenes/npc.tscn" id="2_jbodr"]
+[ext_resource type="Script" uid="uid://c20i6t1j4dwmy" path="res://scripts/skeleton_npc.gd" id="3_n0etu"]
 
 [node name="Fake Final Room" unique_id=1901877510 node_paths=PackedStringArray("player_entrances") instance=ExtResource("1_isvyp")]
 player_entrances = {
@@ -30,4 +31,5 @@ dialogue_text = "A-ha-ha-ha-ha! Sunset? Ha-ha-ha... In a dungeon. Ha-ha! Anyway.
 [node name="Skeleton" parent="Environment" parent_id_path=PackedInt32Array(123840637) index="9" unique_id=2063282561 instance=ExtResource("2_jbodr")]
 visible = false
 position = Vector2(250, 564)
+script = ExtResource("3_n0etu")
 dialogue_text = "You find a handwritten note in this skeleton's hand. \"They screwed me over! All of them lied to me. All but one. The one that didn't point me to a direction. But I got their secret. Remember their instructions. Go back and start over. Rotate the all directions but one 15 minutes CCW. I'm sure you'll figure it out.\""
